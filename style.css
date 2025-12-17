@@ -1,0 +1,190 @@
+/* 全局重置与字体 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lora', serif;
+  line-height: 1.6;
+  color: #f0f0f0;
+  background-color: #0d1b2a;
+  scroll-behavior: smooth;
+}
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+}
+
+/* 导航栏 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0,0,0,0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.nav-links a {
+  color: #e9c46a;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #f4a261;
+}
+
+/* Hero 区域 */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  background: linear-gradient(rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 0.9)), url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #e9c46a;
+}
+.subtitle {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: #a8dadc;
+}
+.desc {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+}
+.cta-button {
+  display: inline-block;
+  background: #e9c46a;
+  color: #0d1b2a;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.cta-button:hover {
+  background: #f4a261;
+}
+
+/* 权重网格 */
+.weights {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.weight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+.weight-item {
+  padding: 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  background: #1b263b;
+}
+.weight-item.emotion { background: #e76f51; color: white; }
+.weight-item.story { background: #f4a261; color: #0d1b2a; }
+.weight-item.rhythm { background: #e9c46a; color: #0d1b2a; }
+.weight-item.tracking { background: #2a9d8f; color: white; }
+.weight-item.2d { background: #264653; color: white; }
+.weight-item.3d { background: #1d3557; color: white; }
+
+/* 引述 */
+.quotes {
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+  color: #a8dadc;
+}
+.quotes cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* 六要素卡片页 */
+.elements-page {
+  padding: 2rem;
+}
+.elements-page h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #e9c46a;
+}
+.intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.elements-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.element-card {
+  background: #1b263b;
+  padding: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+}
+.weight-badge {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: #e9c46a;
+  color: #0d1b2a;
+  font-weight: bold;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50%;
+  font-size: 0.9rem;
+}
+.element-card h2 {
+  margin-bottom: 1rem;
+  color: #f4a261;
+}
+.element-card blockquote {
+  font-style: italic;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid #e9c46a;
+}
+.example {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #a8dadc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.8rem; }
+  .nav-links { display: none; } /* 可扩展为汉堡菜单 */
+}
